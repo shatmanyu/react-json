@@ -1,7 +1,7 @@
 import {createSlice,createAsyncThunk} from "@reduxjs/toolkit"
 //Action 
 export const fetchUserDetails = createAsyncThunk("fetchUser",async()=>{
-    const url = 'https://jsonplaceholder.typicode.com/users'
+    const url = 'https://dummyjson.com/users/'
     const response = await fetch(url)
     console.log(response,"eeeeeeee")
     return response.json()
@@ -23,7 +23,8 @@ const viewDetailsSlice = createSlice({
         },
         addUser(state,action){
             state.firstTime = false
-            state.data.push(action.payload)
+            console.log("actio11",action)
+            state.data?.push(action.payload)
         },
         deleteUser(state,action){
             state.data = state.data.filter((user)=>{
@@ -43,7 +44,7 @@ const viewDetailsSlice = createSlice({
         })
         builder.addCase(fetchUserDetails.fulfilled,(state,action)=>{
             state.isLoading = false;
-            state.data = action.payload
+            state.data = action.payload['users']
         })
         builder.addCase(fetchUserDetails.rejected,(state,action)=>{
             state.isError = true;

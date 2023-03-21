@@ -16,9 +16,9 @@ export default function CreateUser() {
   return (
     <div>
       <button onClick={()=>{navigate('/')}}>Home</button>
-      <div className="btn" style={{display:'flex'}}>
+      {/* <div className="btn" style={{display:'flex'}}> */}
       <Form schema={schema} validator={validator} onSubmit={handleSubmit}/>
-      </div>
+      {/* </div> */}
       
     </div>
   )

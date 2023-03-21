@@ -1,9 +1,8 @@
 const schema = {
     'title':'Create User Form',
-    'type': 'array',
-    'items':
-    {'default':'pp',
-    'properties':{
+    'type': 'object',
+    'properties':
+    {
       'Username':{
         'type':'string',
         'title': "Username",
@@ -88,7 +87,7 @@ const schema = {
             
         }}
       }
-    }}
+    }
 }
 
   export default schema;
