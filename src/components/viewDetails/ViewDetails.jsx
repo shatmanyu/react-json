@@ -10,11 +10,6 @@ export default function ViewDetails() {
     <div>
         {userData?.currentUser?.name}
         {userData?.currentUser?.phone}
-        {userData?.currentUser?.id}
-        {userData?.currentUser?.name}
-        {userData?.currentUser?.phone}
-        {userData?.currentUser?.id}
-        {userData?.currentUser?.name}
     </div>
     </>
   )
